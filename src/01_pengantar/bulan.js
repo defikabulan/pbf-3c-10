@@ -9,7 +9,7 @@ let fruit = {
 
 console.log(fruit["order"]);
 console.log(fruit.description);
-console.log(fruit.owner || "Reza");
+console.log(fruit.owner || "Bulan");
 
 let keys = Object.keys(fruit);
 console.log(keys);
@@ -21,6 +21,8 @@ console.log(entries);
 fruit.price = 25000;
 console.log(fruit);
 fruit.price = 35000;
+console.log(fruit);
+fruit.price = 50000;
 console.log(fruit);
 
 delete fruit.price;
