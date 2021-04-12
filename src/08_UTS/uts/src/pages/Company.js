@@ -6,7 +6,7 @@ export default function Company() {
       <section className="tm-welcome">
         <div className="row">
           <div className="col-12">
-            <h2 className="tm-section-header">About Our Company</h2>
+            <h2 className="tm-section-header mt-4">About Our Company</h2>
           </div>
         </div>
 
@@ -21,8 +21,8 @@ export default function Company() {
                     target="_parent"
                     href="https://templatemo.com/tm-542-new-vision"
                   >
-                    New Vision HTML Template
-                  </a>{" "}
+                    New Vision HTML Template{" "}
+                  </a>
                   is provided by TemplateMo for 100% free of charge. Vestibulum
                   consectetur urna augue, in sagittis mi sodales ut. Maecenas at
                   quam et ligula vulputate commodo. Integer tempor nec velit ut
@@ -63,7 +63,11 @@ export default function Company() {
           </div>
           <div className="col-md-6">
             <div className="tm-about-1">
-              {/* <img src="img/img-3x1-01.jpg" alt="Image" className="img-fluid mb-5"> */}
+              <img
+                src="assets/img/img-3x1-01.jpg"
+                alt="Image"
+                className="img-fluid mb-5"
+              />
               <p className="tm-article-text">
                 Phasellus blandit tortor vel odio hendrerit, eleifend ultricies
                 odio temport. Etiam euismod, lectus convallis efficitur
@@ -78,7 +82,11 @@ export default function Company() {
           </div>
           <div className="col-md-6">
             <div className="tm-about-1">
-              {/* <img src="img/img-3x1-02.jpg" alt="Image" className="img-fluid mb-5"> */}
+              <img
+                src="assets/img/img-3x1-02.jpg"
+                alt="Image"
+                className="img-fluid mb-5"
+              />
               <p className="tm-article-text">
                 Quisque sed tortor sed metus vehicula pulvinar vel dictum
                 tortor. Nivamus eu posuere arcu. Vivamus vel urna id mi congue
@@ -91,6 +99,155 @@ export default function Company() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="tm-featured">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="tm-section-header tm-section-header-small mb-3">
+              Our Team Members
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid tm-carousel">
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-01.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>John Stone</h2>
+              <p class="icon-links">
+                <a href="https://fb.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-02.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>Jane Meldrum</h2>
+              <p class="icon-links">
+                <a href="https://fb.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-03.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>Trevor Virtue</h2>
+              <p class="icon-links">
+                <a href="https://fb.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-04.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>Emily Moore</h2>
+              <p class="icon-links">
+                <a href="https://fb.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-05.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>Claire Li</h2>
+              <p class="icon-links">
+                <a href="https://fb.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-06.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>Elisabeth Shu</h2>
+              <p class="icon-links">
+                <a href="https://fb.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-07.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>Dania Liu</h2>
+              <p class="icon-links">
+                <a href="https://fb.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-zoe">
+            <img src="assets/img/team-img-08.jpg" alt="Featured Item" />
+            <figcaption>
+              <h2>Miracle Yang</h2>
+              <p class="icon-links">
+                <a href="https://facebook.com">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 

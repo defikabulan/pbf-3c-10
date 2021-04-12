@@ -14,20 +14,23 @@ class App extends Component {
         <div className="row">
           <div className="col-12 tm-site-header-col">
             <div className="tm-site-header-left">
-              <h1 className="tm-site-name">New Vision</h1>
+              <i class="far fa-2x fa-eye tm-site-icon"></i>
+              <h1 class="tm-site-name">New Vision</h1>
             </div>
             <div className="tm-site-header-right tm-menu-container-outer">
               <nav className="navbar navbar-expand-lg">
                 <button
-                  class="navbar-toggler"
+                  class="navbar-toggler toggler-example"
                   type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent1"
+                  aria-controls="navbarSupportedContent1"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <span class="navbar-toggler-icon"></span>
+                  <span class="dark-blue-text">
+                    <i class="fas fa-bars fa-1x"></i>
+                  </span>
                 </button>
 
                 <div

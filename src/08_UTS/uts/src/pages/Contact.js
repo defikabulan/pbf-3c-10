@@ -6,7 +6,7 @@ export default function Contact() {
       <section class="tm-welcome">
         <div class="row">
           <div class="col-12">
-            <h2 class="tm-section-header">Contact Information</h2>
+            <h2 class="tm-section-header mt-4">Contact Information</h2>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
                     href="https://templatemo.com/tm-542-new-vision"
                   >
                     New Vision
-                  </a>
+                  </a>{" "}
                   HTML Template is free to download instantly from TemplateMo
                   website. In dapibus dui vitae urna fringilla volupat.
                 </p>
@@ -86,7 +86,7 @@ export default function Contact() {
                   </a>
                 </p>
                 <p>
-                  Email:
+                  Email:{" "}
                   <a href="mailto:info@company.com" class="tm-link">
                     info@company.com
                   </a>

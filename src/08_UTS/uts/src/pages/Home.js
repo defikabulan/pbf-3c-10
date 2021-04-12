@@ -1,88 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
+  const [articles, setArticles] = useState([]);
+
+  const getArticles = async () => {
+    try {
+      let response = await axios.get(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      setArticles(response.data);
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
+  useEffect(() => {
+    getArticles();
+  }, []);
+
   return (
     <main>
       <section className="tm-welcome">
         <div className="row">
           <div className="col-12">
-            <h2 className="tm-section-header">Welcome to New Vision</h2>
+            <h2 className="tm-section-header mt-4">Welcome to New Vision</h2>
           </div>
         </div>
 
         <div className="row tm-welcome-row">
-          <article className="col-lg-6 tm-media">
-            <img
-              src="img/img-3x2-01.jpg"
-              alt="Welcome image"
-              className="img-fluid tm-media-img"
-            />
-            <div className="tm-media-body">
-              <a href="#" className="tm-article-link">
-                <h3 className="tm-article-title text-uppercase">
-                  Best collection
-                </h3>
-              </a>
-              <p>
-                Aliquam purus arcu, congue a gravida ac, facilisis vel erat.
-                Maecenas pretium sem.
-              </p>
-            </div>
-          </article>
-          <article className="col-lg-6 tm-media">
-            <img
-              src="img/img-3x2-02.jpg"
-              alt="Welcome image"
-              className="img-fluid tm-media-img"
-            />
-            <div className="tm-media-body">
-              <a href="#" className="tm-article-link">
-                <h3 className="tm-article-title text-uppercase">
-                  New Design for your website
-                </h3>
-              </a>
-              <p>
-                Aliquam purus arcu, congue a gravida ac, facilisis vel erat.
-                Maecenas pretium sem at nisl malesuada, quis.
-              </p>
-            </div>
-          </article>
-          <article className="col-lg-6 tm-media">
-            <img
-              src="img/img-3x2-03.jpg"
-              alt="Welcome image"
-              className="img-fluid tm-media-img"
-            />
-            <div className="tm-media-body">
-              <a href="#" className="tm-article-link">
-                <h3 className="tm-article-title text-uppercase">
-                  Most unique idea ever made
-                </h3>
-              </a>
-              <p>
-                Aliquam purus arcu, congue a gravida ac, facilisis vel erat.
-                Maecenas. <span className="tm-hover-color">Hover #09F</span>
-              </p>
-            </div>
-          </article>
-          <article className="col-lg-6 tm-media">
-            <img
-              src="img/img-3x2-04.jpg"
-              alt="Welcome image"
-              className="img-fluid tm-media-img"
-            />
-            <div className="tm-media-body">
-              <a href="#" className="tm-article-link">
-                <h3 className="tm-article-title text-uppercase">
-                  Simple touch
-                </h3>
-              </a>
-              <p>
-                Please tell your friends about TemplateMo website. Thank you.
-                Title / Text #666
-              </p>
-            </div>
-          </article>
+          {articles.map((article, index) => {
+            return (
+              <article className="col-lg-6 tm-media" key={index}>
+                <img
+                  src="https://placeimg.com/640/480/tech"
+                  alt="Welcome image"
+                  className="img-fluid tm-media-img"
+                />
+                <div className="tm-media-body">
+                  <a
+                    href={`http://${article.website}`}
+                    target="_blank"
+                    className="tm-article-link"
+                  >
+                    <h3 className="tm-article-title text-uppercase">
+                      {article.company.name}
+                    </h3>
+                  </a>
+                  <p>{article.company.catchPhrase}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         <div className="row tm-welcome-row-2">
@@ -110,7 +79,7 @@ export default function Home() {
                   href="https://templatemo.com/tm-542-new-vision"
                 >
                   New Vision
-                </a>
+                </a>{" "}
                 comes with 4 different HTML pages and provided free of charge by
                 TemplateMo. You can add more pages if you need. Text color is
                 #666
@@ -143,7 +112,7 @@ export default function Home() {
         </div>
         <div className="grid tm-carousel">
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-01.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-01.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
@@ -153,7 +122,7 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-02.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-02.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
@@ -163,7 +132,7 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-03.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-03.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
@@ -173,7 +142,7 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-04.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-04.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
@@ -183,7 +152,7 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-05.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-05.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
@@ -193,7 +162,7 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-06.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-06.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
@@ -203,7 +172,7 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-07.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-07.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
@@ -213,7 +182,7 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="effect-honey">
-            {/* <img src="img/gallery-item-08.jpg" alt="Featured Item"> */}
+            <img src="assets/img/gallery-item-08.jpg" alt="Featured Item" />
             <figcaption>
               <h4>
                 <i>
