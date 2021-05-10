@@ -7,6 +7,11 @@ function Register() {
   const [error, setErrors] = useState("");
 
   const Auth = useContext(AuthContext);
+  const handleForm = (e) => {
+    e.preventDefault();
+    console.log(Auth);
+    Auth.setLoggedIn(true);
+  };
 
   return (
     <div>
@@ -39,12 +44,6 @@ function Register() {
       </form>
     </div>
   );
-
-  const handleForm = (e) => {
-    e.preventDefault();
-    console.log(Auth);
-    Auth.setLoggedIn(true);
-  };
 }
 
 export default Register;

@@ -3,11 +3,11 @@ import routes from "./routes";
 
 const Header = () => (
   <ul className="nav">
-    {routes.map((route, i) => {
+    {routes.map((route, i) => (
       <li key={i}>
         <Link to={route.path}>{route.name}</Link>
-      </li>;
-    })}
+      </li>
+    ))}
   </ul>
 );
 
